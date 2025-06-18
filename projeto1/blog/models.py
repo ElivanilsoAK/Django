@@ -9,7 +9,7 @@ class Post(models.Model):
         return self.titulo
 
 class Comentario(models.Model):
-    post = models.ForeignKey(Post, on_delete=models.CASCADE)
+    post_id = models.ForeignKey(Post, on_delete=models.CASCADE)
     texto = models.CharField(max_length=500)
     com_date = models.DateTimeField('data do comentário')
 
