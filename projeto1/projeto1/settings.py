@@ -37,8 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'votacao', # Seu app de votação existente
-    'blog',    # <--- Adicione esta linha
+    'votacao', # app de votação existente
+    'blog',    # Novo app de blog
+    'core',    # Novo app de home
 ]
 
 MIDDLEWARE = [

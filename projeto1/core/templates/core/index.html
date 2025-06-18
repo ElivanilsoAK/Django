@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Página Inicial do Projeto</title>
+    </head>
+    <body>
+        <h1>Bem-vindo ao Meu Projeto Django!</h1>
+        <p>Escolha uma das opções abaixo:</p>
+        <ul>
+            <li><a href="{% url 'votacao:index' %}">Aplicativo de Votação</a></li>
+            <li><a href="{% url 'blog:index' %}">Aplicativo de Blog</a></li>
+        </ul>
+    </body>
+</html>

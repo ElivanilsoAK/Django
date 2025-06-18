@@ -16,9 +16,19 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.views.generic.base import RedirectView
+
+# Importe a view index do seu novo aplicativo 'core'
+from core import views as core_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('votacao/', include('votacao.urls')),
     path('blog/', include('blog.urls')),
+
+    # URL para a página de entrada principal (ex: http://localhost:8000/index/)
+    path('index/', core_views.index, name='main_index'),
+
+    # Redireciona a URL raiz (/) para a página de entrada /index/
+    path('', RedirectView.as_view(url='/index/', permanent=False), name='root_redirect'),
 ]
